@@ -1,0 +1,15 @@
+--To create a table named users
+
+CREATE TABLE USERS(ID INT IDENTITY(1,1),NAME VARCHAR(20))
+
+--To enter register
+
+INSERT INTO USERS (NAME) VALUES ('AHMET YASIN')
+
+--To change table property (add telephone number area)
+
+ALTER TABLE USERS ADD TELE_NUMBER VARCHAR(12)
+
+--To change table property (delete telephone number area)
+
+ALTER TABLE USERS DROP COLUMN  TELEFON 
