@@ -1,0 +1,47 @@
+
+DECLARE @KELIME AS VARCHAR(20)
+SET @KELIME = 'Ahmet Kartalmis'
+
+    -- UPPER
+SELECT UPPER(@KELIME)
+	--output:AHMET KARTALMIS
+
+	--lower
+SELECT LOWER(@KELIME)
+	--output:ahmet kartalmis
+
+	--Substring
+SELECT SUBSTRING(@KELIME,1,5)
+	--output:Ahmet
+
+	--Left
+SELECT LEFT(@KELIME,5)
+	--output:Ahmet
+
+	--Right
+SELECT RIGHT(@KELIME,9)
+	--output:Kartalmis
+
+
+	-- RTRIM => deletes spaces to the right of the text.            using:RTRIM(@KELIME)
+	-- LTRIM => deletes spaces to the left of the text.             using:LTRIM(@KELIME)
+	-- TRIM  => deletes spaces to the right and left of the text.   using:TRIM(@KELIME)
+
+    --REPLACE
+SELECT REPLACE(@KELIME,'A','X')
+	--output:Xhmet KXrtXlmis
+SELECT REPLACE(@KELIME,'Ahmet','Mehmet')
+	--output:Mehmet Kartalmis
+
+	--LEN
+SELECT LEN(@KELIME)   --Lenght of text 
+	--output:15
+
+
+	--String Split
+Select * from string_split(@KELIME,' ')
+	--output: (output is a table)
+		--Ahmet
+		--Kartalmis
+		
+
